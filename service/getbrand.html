@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>商品分类</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/getbrand.css">
+</head>
+<body>
+<!--头部区域-->
+<header class="mmm_header">
+    <div class="right fr"><a href="javascript:void(0);"><img src="images/header_app.png" alt=""></a></div>
+    <div class="left"><a href="index.html"><img src="images/header_logo.png" alt=""></a></div>
+</header>
+<!--搜索框-->
+<section class="mmm_search">
+    <div class="con">
+        <div class="right fr">
+            <button>搜索</button>
+        </div>
+        <div class="left"><input type="text" placeholder="请输入你想比价的商品"></div>
+    </div>
+</section>
+<!--列表头-->
+<section class="navbar clearfix">
+    <ul class="nav_dh clearfix">
+        <li class="fl"><a href="index.html">首页</a>&gt;</li>
+        <li class="fl"><a href="brandTitle.html">品牌大全</a>&gt;</li>
+        <li class="fl xiangxi one-txt-cut"><a href="javascript:void(0);">平板电视哪个品牌好</a></li>
+    </ul>
+    <input type="button" value="筛选" class="fr center-self_y">
+</section>
+<!--热卖标题-->
+<section class="hot pai">
+    <p></p>
+</section>
+<!--品牌排行-->
+<section class="paihang">
+    <ul class="bd">
+
+    </ul>
+</section>
+
+<!--销量排行-->
+<section class="hot hang">
+    <p></p>
+</section>
+<!--内容-->
+<section class="con">
+    <ul class="bot list_bot">
+
+    </ul>
+</section>
+
+<!--最新评论-->
+<section class="hot lun">
+    <p></p>
+</section>
+<section class="pinglun">
+    <ul class="lili ttt">
+
+    </ul>
+</section>
+
+</body>
+
+<!--底部-->
+<footer class="mmm_footer">
+    <ul class="nav clearfix">
+        <li class="fl"><a href="javascript:void(0);">登录</a></li>
+        <li class="fl"><a href="javascript:void(0);">注册</a></li>
+        <li class="fl"><a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</a></li>
+    </ul>
+    <p>
+        <a href="javascript:void(0);">手机APP下载</a>
+        <a href="javascript:void(0);">慢慢买手机版</a>
+        <span>--掌上会比价平台</span>
+    </p>
+    <p>m.manmanbuy.com</p>
+</footer>
+</body>
+
+
+<script type="text/template" id="titletpl">
+    {{each result v i}}
+    <li class="center-y" data-id="{{v.categoryId}}">
+        <div class="img fl">{{i+1}}</div>
+        <div class="tit">
+            <p>{{v.brandName}}</p>
+            <p>{{v.brandInfo}}</p>
+        </div>
+    </li>
+    {{/each}}
+</script>
+<script type="text/template" id="listtpl">
+    {{each result v i}}
+    <li data-pro="{{v.productId}}" class="duct">
+        <a href="javascript:void(0);">
+            <div class="right fr">
+                <p class="txt-cut">{{v.productName}}</p>
+                <p class="prc txt-cut">{{v.productPrice}}</p>
+                <div class="info">
+                    <span class="add">{{v.productQuote}}</span>
+                    <span class="msg">{{v.productCom}}</span>
+                </div>
+                <span class="xing">★★★★★</span>
+            </div>
+            <div class="left center-self_y">
+                {{@v.productImg}}
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script type="text/template" id="lilitpl">
+    {{each $data v i}}
+    <li>
+        <a href="javascript:void(0);" class="clearfix">
+            <div class="right fr">
+                <p class="txt-cut" style="margin-top: 1.2rem">{{name}}</p>
+            </div>
+            <div class="left center-self_y">
+                {{@img}}
+            </div>
+        </a>
+        <div class="log">
+            <i></i>
+            <div class="inf clearfix">
+                <span class="user fl">{{v.comName}}</span>
+                <span class="xing">★★★★★</span>
+                <span class="time fr">{{v.comTime}}</span>
+            </div>
+            <p>{{v.comContent}}</p>
+        </div>
+    </li>
+    {{/each}}
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/template-web.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/getbrand.js"></script>
+</html>

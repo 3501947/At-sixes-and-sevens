@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>优惠券</title>
+    <link rel="stylesheet" href="css/getcouponproduct.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+</head>
+<body>
+<!--头部区域-->
+<header class="mmm_header">
+    <div class="right fr"><a href="javascript:void(0);"><img src="images/header_app.png" alt=""></a></div>
+    <div class="left fl"><span onclick="window.location.href='coupon.html'"><</span></div>
+    <h3>肯德基优惠券</h3>
+</header>
+
+<section class="content">
+    <p class="tip">--点餐前出示手机中的优惠券，即可享受优惠--</p>
+    <ul class="con">
+
+    </ul>
+</section>
+
+
+<section class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                </div>
+
+                <!-- Add Navigation -->
+                <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="swiper-button-next swiper-button-white"></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!--底部-->
+<footer class="mmm_footer">
+    <ul class="nav clearfix">
+        <li class="fl"><a href="javascript:void(0);">登录</a></li>
+        <li class="fl"><a href="javascript:void(0);">注册</a></li>
+        <li class="fl"><a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</a></li>
+    </ul>
+    <p>
+        <a href="javascript:void(0);">手机APP下载</a>
+        <a href="javascript:void(0);">慢慢买手机版</a>
+        <span>--掌上会比价平台</span>
+    </p>
+    <p>m.manmanbuy.com</p>
+</footer>
+</body>
+
+<script type="text/template" id="contpl">
+    {{each result v i}}
+    <li class="duct" data-toggle="modal" data-target=".bs-example-modal-lg">
+        <a href="javascript:void(0);">
+            <div class="right">
+                <p class="txt-cut">{{v.couponProductName}}</p>
+                <p class="prc txt-cut">{{v.couponProductPrice}}</p>
+                <p class="info">{{v.couponProductTime}}</p>
+            </div>
+            <div class="left center-self_y">
+                {{@v.couponProductImg}}
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script type="text/template" id="swtpl">
+    {{each result v i}}
+    <div class="swiper-slide">
+        {{@v.couponProductImg}}
+    </div>
+    {{/each}}
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/template-web.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/getcouponproduct.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/swiper-3.4.2.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        observer: true,//修改swiper自己或子元素时，自动初始化swiper
+        observeParents: true,//修改swiper的父元素时，自动初始化swiper
+    });
+</script>
+
+</html>

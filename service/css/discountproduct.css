@@ -1,0 +1,158 @@
+.mmm_header {
+  color: #fff;
+  text-align: center;
+}
+.mmm_header h3 {
+  font-size: 1.15rem;
+  line-height: 2.5rem;
+}
+.mmm_header .left {
+  width: 2.5rem;
+}
+.mmm_header .left span {
+  color: #fff;
+  font-family: "宋体";
+  font-weight: 900;
+  font-size: 1.15rem;
+  line-height: 2.5rem;
+  margin-left: 0.5rem;
+}
+.title {
+  padding: 0.5rem;
+  background-color: #fff;
+}
+.title .hd h2 {
+  font-size: 1.15rem;
+  color: #000;
+  margin: 0.25rem 0;
+}
+.title .hd h4 {
+  color: #ff841d;
+  font-size: 1rem;
+}
+.title .hd p {
+  margin: 0.75rem 0;
+  font-size: 0.7rem;
+}
+.title .content img {
+  height: 7.75rem;
+  width: 7.75rem;
+  float: right;
+}
+.title .content p {
+  font-size: 0.85rem;
+  color: #666;
+  text-indent: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+.title .img {
+  padding: 0.75rem;
+}
+.title #disstorck {
+  width: 6.35rem;
+  margin: 1rem auto;
+  box-shadow: 0 0 0.25rem #ccc;
+  padding: 0.5rem;
+}
+.title #disstorck li {
+  height: 1.25rem;
+  line-height: 1.25rem;
+  border-bottom: 0.025rem dashed #ccc;
+  padding: 0 0.5rem;
+}
+.title #disstorck li span {
+  font-size: 0.7rem;
+  color: #333;
+  font-weight: 700;
+}
+.title #disstorck li strong {
+  color: #ff841d;
+  float: right;
+}
+.title input {
+  width: 16.75rem;
+  height: 1.75rem;
+  background-color: #ff841d;
+  border-radius: 0.25rem;
+  color: #fff;
+  font-size: 0.7rem;
+  outline: none;
+}
+.title .banner {
+  margin: 1rem 0;
+}
+.new {
+  padding: 0.5rem;
+  background-color: #fff;
+}
+.new .tit {
+  font-size: 0.9rem;
+  color: #000;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+.new .form {
+  margin-top: 0.25rem;
+  border: 0.15rem solid #ddd;
+  overflow: hidden;
+}
+.new .form textarea {
+  width: 100%;
+  height: 3.75rem;
+  border: 0;
+  resize: none;
+  outline: none;
+}
+.new .form .ctrl {
+  height: 1.9rem;
+  border-top: 0.1rem solid #eee;
+  background-color: #f1f1f1;
+}
+.new .form .ctrl input {
+  width: 5rem;
+  height: 1.9rem;
+  background-color: #ff841d;
+  color: #fff;
+  font-size: 0.8rem;
+  float: right;
+}
+.new .list .ui-border-b .userimg img {
+  width: 3rem;
+  border-radius: 50%;
+  float: left;
+}
+.new .list .ui-border-b .con {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+.new .list .ui-border-b .con .name {
+  margin-left: 3.5rem;
+}
+.new .list .ui-border-b .con .name .username {
+  margin-top: 0.25rem;
+  float: left;
+  color: skyblue;
+  font-size: 0.7rem;
+}
+.new .list .ui-border-b .con .name .time {
+  margin-top: 0.25rem;
+  font-size: 0.7rem;
+  float: right;
+  margin-right: 0.5rem;
+}
+.new .list .ui-border-b .con .content {
+  width: 12.5rem;
+  font-size: 0.8rem;
+  position: absolute;
+  left: 3.5rem;
+  bottom: 0.25rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.new .list .ui-border-b .con .content .yinyong {
+  display: none;
+}
+.new .list .ui-border-b .con .content img {
+  display: none;
+}

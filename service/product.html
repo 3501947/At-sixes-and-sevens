@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>详细信息</title>
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+
+<body>
+<!--头部区域-->
+<header class="mmm_header">
+    <div class="right fr"><a href="javascript:void(0);"><img src="images/header_app.png" alt=""></a></div>
+    <div class="left"><a href="index.html"><img src="images/header_logo.png" alt=""></a></div>
+</header>
+<!--搜索框-->
+<section class="mmm_search">
+    <div class="con">
+        <div class="right fr">
+            <button>搜索</button>
+        </div>
+        <div class="left"><input type="text" placeholder="请输入你想比价的商品"></div>
+    </div>
+</section>
+<!--列表头-->
+<section class="navbar clearfix">
+    <ul class="nav_dh clearfix">
+        <li class="fl"><a href="index.html">首页</a>&gt;</li>
+        <li class="fl xiangxi"><a href="category.html"></a>&gt;</li>
+        <li class="fl juti txt-cut"><a href="list.html"></a></li>
+    </ul>
+    <input type="button" value="筛选" class="fr center-self_y">
+</section>
+
+<!--主介绍-->
+<section class="main">
+
+</section>
+<!--bar-->
+<section class="bar clearfix">
+    <div class="w33 fl">比价购买</div>
+    <div class="w33 fl">产品参数</div>
+    <div class="w33 fl">评论(2333)</div>
+</section>
+<!--来源-->
+<section class="from">
+    <div class="jtop">
+
+    </div>
+    <div class="jbot">
+        <p> * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p>
+    </div>
+</section>
+<!--评论-->
+<section class="plun">
+    <p class="phead">网友评论</p>
+
+
+
+</section>
+<!--点击更多-->
+<section class="moreplun">
+    <input type="button" value="查看更多评论">
+</section>
+<!--底部-->
+<footer class="mmm_footer">
+    <ul class="nav clearfix">
+        <li class="fl"><a href="javascript:void(0);">登录</a></li>
+        <li class="fl"><a href="javascript:void(0);">注册</a></li>
+        <li class="fl"><a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</a></li>
+    </ul>
+    <p>
+        <a href="javascript:void(0);">手机APP下载</a>
+        <a href="javascript:void(0);">慢慢买手机版</a>
+        <span>--掌上会比价平台</span>
+    </p>
+    <p>m.manmanbuy.com</p>
+</footer>
+</body>
+
+
+<script type="text/template" id="mtpl">
+    {{each result v i}}
+        <h2>{{v.productName}}</h2>
+        <div>{{@v.productImg}}</div>
+        <span>收藏</span>
+    {{/each}}
+</script>
+<script type="text/template" id="pltpl">
+    {{each result v i}}
+    <div class="pbody">
+        <p class="clearfix">
+            <span class="fl">{{v.comName}}</span>
+            <span class="fr">{{v.comTime}}</span>
+        </p>
+        <p class="clearfix">
+            <span class="fr">{{v.comFrom}}</span>
+        </p>
+        <p>{{v.comContent}}</p>
+    </div>
+    {{/each}}
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/template-web.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/product.js"></script>
+</html>

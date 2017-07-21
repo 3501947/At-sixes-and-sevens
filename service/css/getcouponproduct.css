@@ -1,0 +1,104 @@
+.mmm_header {
+  color: #fff;
+  text-align: center;
+  background-color: #e4393c !important;
+}
+.mmm_header h3 {
+  font-size: 1.15rem;
+  line-height: 2.5rem;
+  margin-top: 0;
+}
+.mmm_header .left {
+  width: 2.5rem;
+}
+.mmm_header .left span {
+  color: #fff;
+  font-family: "宋体";
+  font-weight: 900;
+  font-size: 1.15rem;
+  line-height: 2.5rem;
+  margin-left: 0.5rem;
+}
+.content .tip {
+  text-align: center;
+  color: #999;
+  font-size: 0.7rem;
+  padding: 0.5rem 0;
+  background-color: #fff;
+  margin: 0;
+}
+.content .con {
+  padding: 0 0 0.5rem 0;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+}
+.content .con li {
+  padding: 0.5rem 0.5rem 0;
+  border-bottom: 0.025rem solid #ddd;
+  background-color: #fff;
+  height: 6.4rem;
+  position: relative;
+}
+.content .con li .left img {
+  width: 5.75rem;
+}
+.content .con li .right {
+  margin: 0.5rem 0 0 6.25rem;
+}
+.content .con li .right p {
+  font-size: 0.8rem;
+  color: #000;
+  font-weight: 700;
+}
+.content .con li .right .prc {
+  color: red;
+  margin: -0.5rem 0 -0.375rem;
+  font-size: 1rem;
+  height: 1.875rem;
+}
+.content .con li .right .info {
+  font-size: 0.625rem;
+  color: #ff841d;
+}
+.content .con li:first-child {
+  border-top: 0.025rem solid #ddd;
+}
+.modal .modal-content {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  margin: 50% auto;
+}
+.modal .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.modal .swiper-slide {
+  font-size: 18px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 60px;
+}
+.modal .parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+.modal .swiper-slide .title {
+  font-size: 41px;
+  font-weight: 300;
+}
+.modal .swiper-slide .subtitle {
+  font-size: 21px;
+}
+.modal .swiper-slide .text {
+  font-size: 14px;
+  max-width: 400px;
+  line-height: 1.3;
+}

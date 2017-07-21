@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		span{
+				font-size:60px;
+				font-weight:700;
+				position:relative;
+				color:red;
+				animation: bianshuai 1.6s linear infinite alternate;
+			}
+			@keyframes bianshuai{
+				0%{
+					top:0;
+					color:red;
+					text-shadow: 1px 1px 2px yellowgreen;
+				}
+				100%{
+					top:30px;
+					color:cyan;
+					text-shadow: 1px 1px 2px pink;
+				}
+			}
+			span:nth-child(2){
+				animation-delay: 0.2s;
+			}
+			span:nth-child(3){
+				animation-delay: 0.4s;
+			}
+			span:nth-child(4){
+				animation-delay: 0.6s;
+			}
+			span:nth-child(5){
+				animation-delay: 0.8s;
+			}
+			span:nth-child(6){
+				animation-delay: 1s;
+			}
+			span:nth-child(7){
+				animation-delay: 1.2s;
+			}
+			span:nth-child(8){
+				animation-delay: 1.4s;
+			}
+	</style>
+</head>
+<body>
+	<span>宇</span>
+	<span>宙</span>
+	<span>无</span>
+	<span>敌</span>
+	<span>帅</span>
+	<span>气</span>
+	<span>飞</span>
+	<span>飞</span>
+</body>
+</html>

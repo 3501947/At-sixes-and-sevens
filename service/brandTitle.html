@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>商品分类</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/brandTitle.css">
+</head>
+<body>
+<!--头部区域-->
+<header class="mmm_header">
+    <div class="right fr"><a href="javascript:void(0);"><img src="images/header_app.png" alt=""></a></div>
+    <div class="left"><a href="index.html"><img src="images/header_logo.png" alt=""></a></div>
+</header>
+<!--搜索框-->
+<section class="mmm_search">
+    <div class="con">
+        <div class="right fr">
+            <button>搜索</button>
+        </div>
+        <div class="left"><input type="text" placeholder="请输入你想比价的商品"></div>
+    </div>
+</section>
+<!--列表头-->
+<section class="navbar clearfix">
+    <ul class="nav_dh clearfix">
+        <li class="fl"><a href="index.html">首页</a>&gt;</li>
+        <li class="fl"><a href="brandTitle.html">品牌大全</a></li>
+    </ul>
+    <input type="button" value="筛选" class="fr center-self_y">
+</section>
+
+<!--热卖标题-->
+<section class="hot">
+    <p>热卖品牌排行</p>
+</section>
+
+<section class="class_list">
+    <ul class="bd">
+
+    </ul>
+</section>
+
+
+<!--底部-->
+<footer class="mmm_footer">
+    <ul class="nav clearfix">
+        <li class="fl"><a href="javascript:void(0);">登录</a></li>
+        <li class="fl"><a href="javascript:void(0);">注册</a></li>
+        <li class="fl"><a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</a></li>
+    </ul>
+    <p>
+        <a href="javascript:void(0);">手机APP下载</a>
+        <a href="javascript:void(0);">慢慢买手机版</a>
+        <span>--掌上会比价平台</span>
+    </p>
+    <p>m.manmanbuy.com</p>
+</footer>
+</body>
+
+
+<script type="text/template" id="titletpl">
+    {{each result v i}}
+    <li class="lst" data-index="{{v.brandTitleId}}">
+        <span class="title center-y">{{v.brandTitle}}</span>
+    </li>
+    {{/each}}
+</script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/template-web.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/brandTitle.js"></script>
+
+</html>

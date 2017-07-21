@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/discountproduct.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<!--头部区域-->
+<header class="mmm_header">
+    <div class="right fr"><a href="javascript:void(0);"><img src="images/header_app.png" alt=""></a></div>
+    <div class="left fl"><span onclick="window.location.href='inlanddiscount.html'"><</span></div>
+    <h3>国内折扣</h3>
+</header>
+
+<section class="title">
+
+</section>
+
+<section class="new">
+
+</section>
+
+<!--底部-->
+<footer class="mmm_footer">
+    <ul class="nav clearfix">
+        <li class="fl"><a href="javascript:void(0);">登录</a></li>
+        <li class="fl"><a href="javascript:void(0);">注册</a></li>
+        <li class="fl"><a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</a></li>
+    </ul>
+    <p>
+        <a href="javascript:void(0);">手机APP下载</a>
+        <a href="javascript:void(0);">慢慢买手机版</a>
+        <span>--掌上会比价平台</span>
+    </p>
+    <p>m.manmanbuy.com</p>
+</footer>
+
+</body>
+
+<script type="text/template" id="proltp">
+    {{each result v i}}
+    <div class="hd">
+        <h2>{{v.productName}}</h2>
+        <h4>{{v.productPrice}}</h4>
+        <p>
+            <span>{{v.productFrom}}</span>
+            <span>{{v.productTime}}</span>
+            <span>{{v.productTips}}</span>
+        </p>
+    </div>
+    <div class="content clearfix">
+        <p>{{v.productInfo}}</p>
+    </div>
+    <div class="img">{{@v.productImg}}</div>
+    <input type="button" value="前往购买">
+    <div class="banner"><img src="images/mmbweixin2.png" alt=""></div>
+    {{/each}}
+</script>
+
+<script type="text/template" id="plltp">
+    {{each result v i}}
+    {{@v.productComment}}
+    {{/each}}
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/template-web.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/discountproduct.js"></script>
+</html>

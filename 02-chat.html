@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #F7F7F7;
+        }
+        h3 {
+            text-align: center;
+        }
+        .chatbox {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid #CCC;
+            background-color: #FFF;
+            border-radius: 5px;
+        }
+        .messages {
+            height: 350px;
+            padding: 20px 40px;
+            box-sizing: border-box;
+            border-bottom: 1px solid #CCC;
+            overflow: scroll;
+        }
+        .self {
+            text-align: left;
+        }
+        .other {
+            text-align: right;
+        }
+        .form {
+            height: 150px;
+        }
+        .form .input {
+            height: 110px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .form .btn {
+            height: 40px;
+            box-sizing: border-box;
+            border-top: 1px solid #CCC;
+        }
+        .form textarea {
+            display: block;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border: none;
+            resize: none;
+            outline: none;
+            font-size: 20px;
+        }
+        .form input {
+            display: block;
+            width: 100px;
+            height: 30px;
+            margin-top: 5px;
+            margin-right: 20px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<h3>简单的Ajax实例聊天室</h3>
+<div class="chatbox">
+    <div class="messages"></div>
+    <div class="form">
+        <div class="input"><textarea></textarea></div>
+        <div class="btn">
+            <input type="button" class="send" value="发送">
+            <input type="button" class="clear" value="清屏">
+        </div>
+    </div>
+</div>
+<script>
+	//1. 找到发送按钮，并且注册点击事件
+	var sendBtn = document.querySelector(".send");
+	//2. 找到textaera
+	var input = document.querySelector(".input>textarea");
+	//3. 获取message div
+	var msgBox = document.querySelector(".messages");
+	//4. 获取清屏按钮
+	var clearBtn = document.querySelector(".clear");
+
+	sendBtn.onclick = function(){
+		//获取用户的输入
+		var content = input.value;
+
+		//清空输入的文本框
+		input.value = "";
+
+		//生成p标签，将用户输入的内容展示到message div中
+		var p = document.createElement("p");
+		p.innerText = "我: " + content;
+		p.className = "self";
+		//将p标签加到msgBox中去
+		msgBox.appendChild(p);
+
+		//通过Ajax向后台发送数据获取回复
+			//地址：chat.php
+			//方式：post
+			//键：message
+
+		//1. 创建一个xhr对象
+		var xhr = new XMLHttpRequest();
+		//2. 调用open方法设置请求方式以及请求地址
+		xhr.open("post", "chat.php");
+		//3. 设置请求头
+		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		//4. 发送数据
+		xhr.send("message=" + content);
+		//5. 注册onreadystatechange事件 
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState == 4 && xhr.status == 200){
+				var reply = xhr.responseText;
+				//创建p标签，将p标签的内容设置为回复的信息
+				var p = document.createElement("p");
+				p.innerText = "小猪猪：" + reply;
+				p.className = "other";
+				//将p标签添加到message div中去
+				msgBox.appendChild(p);
+			}
+		}
+	}
+
+
+	clearBtn.onclick = function(){
+		msgBox.innerHTML = "";
+	}
+
+</script>
+</body>
+</html>

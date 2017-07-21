@@ -1,0 +1,191 @@
+@color: #ff841d;
+
+//头部区域
+.mmm_header {
+  width: 100%;
+  height: 100/40rem;
+  background-color: @color;
+  .right {
+    a {
+      display: block;
+      padding: 13/40rem;
+      img {
+        width: 73/40rem;
+      }
+    }
+  }
+  .left {
+    margin-right: 90/40rem;
+    a {
+      display: block;
+      padding: 22/40rem;
+      img {
+        width: 390/40rem;
+      }
+    }
+  }
+}
+
+//搜索栏
+.mmm_search {
+  width: 100%;
+  height: 100/40rem;
+  border-bottom: 1/40rem solid #ddd;
+  .con {
+    padding: 20/40rem;
+    .right button {
+      height: 60/40rem;
+      width: 130/40rem;
+      outline: none;
+      border: none;
+      border-radius: 60/40/2rem;
+      background-color: @color;
+      color: #fff;
+      font-size: 32/40rem;
+    }
+    .left {
+      input {
+        width: 80%;
+        height: 60/40rem;
+        line-height: 60/40rem;
+        outline: none;
+        background-color: #e8e8e8;
+        border-radius: 60/40/2rem;
+        text-indent: 40/40rem;
+        font-size: 32/40rem;
+      }
+    }
+  }
+}
+
+//导航栏
+.mmm_nav {
+  margin-top: 10/40rem;
+  li a {
+    display: block;
+    padding: 25/40rem 35/40rem 0 35/40rem;
+    color: #333;
+    p {
+      margin-top: 5/40rem;
+      font-size: 28/40rem;
+      white-space: nowrap;
+      text-align: center;
+    }
+  }
+  .morelist {
+    display: none;
+  }
+  border-bottom: 8/40rem solid #eee;
+  padding: 20/40rem 0 40/40rem 0;
+}
+
+//产品列表
+.mmm_list {
+  position: relative;
+  .top {
+    height: 70/40rem;
+    background-color: @color;
+    position: relative;
+    h3 {
+      font-size: 34/40rem;
+      color: #fff;
+      line-height: 70/40rem;
+      margin-left: 20/40rem;
+    }
+    a {
+      right: 22/40rem;
+      img {
+        width: 40/40rem;
+      }
+    }
+  }
+  .bot {
+    padding:0 0 20/40rem 0;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    li {
+      padding:20/40rem  20/40rem 0 ;
+      border-bottom: 1/40rem solid #ddd;
+      background-color: #fff;
+      height: 256/40rem;
+      position: relative;
+      .left img {
+        width: 230/40rem;
+      }
+      .right {
+        margin: 35/40rem 0 0 250/40rem;
+        p {
+          font-weight: 700;
+          font-size: 28/40rem;
+          color: #000;
+          span {
+            color: @color;
+          }
+        }
+        .info{
+          margin-top: 30/40rem;
+          font-size: 25/40rem;
+          .msg{
+            margin-right: 20/40rem;
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+  button{
+    border: none;
+    outline: none;
+    width: 708/40rem;
+    height: 60/40rem;
+    border: 1/40rem solid #ccc;
+    border-radius: 10/40rem;
+    background-color: #f5f5f5;
+    color: #666;
+    z-index: 1;
+    font-size: 30/40rem
+  }
+}
+
+//品牌排行
+.mmm_paihang{
+  margin: 80/40rem 0 50/40rem;
+}
+
+//底部
+.mmm_footer{
+  margin-bottom: 30/40rem;
+  ul{
+    border-bottom: 1/40rem solid #ccc;
+    border-top: 1/40rem solid #ccc;
+    margin-bottom: 30/40rem;
+    li{
+      height: 64/40rem;
+      line-height: 64/40rem;
+      text-align: center;
+      a{
+        display: inline-block;
+        width: 100%;
+        font-size: 30/40rem
+      }
+    }
+    li:nth-child(1){
+      width: 30%;
+    }
+    li:nth-child(2){
+      border-right: 1/40rem solid #ccc;
+      border-left: 1/40rem solid #ccc;
+      width: 30%;
+    }
+    li:nth-child(3){
+      width: 39%;
+    }
+  }
+  p{
+    text-align: center;
+    font-size: 30/40rem;
+    a:first-child{
+      color: red;
+    }
+  }
+}

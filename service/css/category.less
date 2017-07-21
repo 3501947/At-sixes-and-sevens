@@ -1,0 +1,61 @@
+//分类页面
+.class_list {
+  padding: 10/40rem;
+  margin: 20/40rem 0;
+  .bd {
+    border: 1/40rem solid #ccc;
+    border-radius: 20/40rem;
+    overflow: hidden;
+    .lst {
+      background-color: #f1f1f1;
+      line-height: 100/40rem;
+      text-indent: 30/40rem;
+      font-size: 36/40rem;
+      font-weight: 700;
+      color: #000;
+      .title{
+        display: block;
+        width: 100%;
+        height: 100/40rem;
+        position: relative;
+        border-bottom: 1/40rem solid #ccc;
+      }
+      .title:before {
+        content: "";
+        display: inline-block;
+        width: 69/40rem;
+        height: 15/40rem;
+        background: url("http://www.zuyushop.com/wap/images/arrow1.gif") no-repeat;
+        right: 4/40rem;
+      }
+      .hid{
+        display: none;
+        ul {
+          width: 100%;
+          background-color: #fff;
+          li {
+            height: 80/40rem;
+            line-height: 80/40rem;
+            border-bottom: 1/40rem solid #ccc;
+            font-size: 28/40rem;
+          }
+          li:nth-child(3n-1) {
+            width: 32%;
+            border-right: 1/40rem solid #ccc;
+            border-left: 1/40rem solid #ccc;
+          }
+          li:last-child{
+            border-right: 1/40rem solid #ccc;
+          }
+          li:nth-child(3n){
+            border-right: 1/40rem solid #ccc;
+          }
+        }
+      }
+    }
+  }
+}
+.show{
+  display: block !important;
+}
+

@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style type="text/css">
+    html, body {
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+      height: 100%;
+      font-family: "微软雅黑";
+      font-size: 62.5%;
+      background: #ccc;
+    }
+
+    .boxDom {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .idDom {
+      width: 100%;
+      height: 60px;
+      background: #666;
+      position: fixed;
+      bottom: 0px;
+    }
+
+    .content {
+      display: inline-block;
+      width: 430px;
+      height: 40px;
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      top: 0px;
+      bottom: 0px;
+      margin: auto;
+    }
+
+    .title {
+      display: inline;
+      font-size: 4em;
+      vertical-align: bottom;
+      color: #fff;
+    }
+
+    .text {
+      border: none;
+      width: 300px;
+      height: 30px;
+      border-radius: 5px;
+      font-size: 2.4em;
+    }
+
+    .btn {
+      width: 60px;
+      height: 30px;
+      background: #f90000;
+      border: none;
+      color: #fff;
+      font-size: 2.4em;
+    }
+
+    span {
+      width: 300px;
+      height: 40px;
+      position: absolute;
+      overflow: hidden;
+      color: #000;
+      font-size: 4em;
+      line-height: 1.5em;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+
+<body>
+<div class="boxDom" id="boxDom">
+  <div class="idDom" id="idDom">
+    <div class="content">
+      <p class="title">吐槽:</p>
+      <input type="text" class="text" id="text"/>
+      <button type="button" class="btn" id="btn">发射</button>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  //1. 找对象
+  var boxDom = document.getElementById("boxDom");
+  var text = document.getElementById("text");
+  var btn = document.getElementById("btn");
+
+  var colors = ["red", "pink", "hotpink", "deeppink", "cyan", "yellow", "green", "purple", "teal", "orange"];
+  //给btn注册点击事件
+  btn.onclick = function () {
+    //设置 text的value值
+    var content = text.value;
+    console.log(content) ;
+
+    text.value = "";
+    //点击的时候生成一个span 并且设置span的内容跟text.value的内容一致.
+    var span = document.createElement("span");
+    boxDom.appendChild(span);
+    span.innerText = content;
+    //设置span的随机颜色
+    var colorsRandom = parseInt(Math.random() * colors.length)
+    span.style.color = colors[colorsRandom];
+    //设置span的随机高度
+    var heightRandom = parseInt(Math.random() * 301)
+    span.style.top = heightRandom + "px";
+    //设置span的位置 （隐藏 然后用动画调出）
+    span.style.left = getClient().width + "px";
+    animate(span, -300, function () {
+      boxDom.removeChild(span);
+    });
+  }
+  document.onkeyup = function (e) {
+    if (e.keyCode == 13) {
+      btn.onclick();
+    }
+  }
+  function animate(element, target, fn) {
+    //一进来，就清空定时器，保证只有一个定时器在跑
+    if (element.timer) {
+      clearInterval(element.timer);
+    }
+
+    element.timer = setInterval(function () {
+      var leader = element.offsetLeft;
+      //什么时候给负值
+      var step = target > leader ? 5 : -5;
+
+      if (Math.abs(target - leader) >= Math.abs(step)) {
+        leader = leader + step;
+        element.style.left = leader + "px";
+      } else {
+        clearInterval(element.timer);
+        //抱过去
+        element.style.left = target + "px";
+        fn && fn();
+      }
+
+    }, 15);
+  }
+
+
+  function getClient() {
+    return {
+      width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth || 0,
+      height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || 0
+    }
+  }
+
+</script>
+</body>
+
+
+</html>

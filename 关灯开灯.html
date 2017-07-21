@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)http://127.0.0.1:8020/Hbu/%E5%85%B3%E7%81%AF%E5%BC%80%E7%81%AF.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title></title>
+		<style>
+			body{
+					background-color: black;
+			}
+			.box{
+				color: #fff;
+				font: 700  30px/200px "华文彩云";
+				margin: 100px auto;
+			}
+			.box1{
+				color: black;
+				font: 400 20px/60px "微软雅黑";
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		
+		
+		<div class="box">
+			点击按钮，你会看到你想要的
+		</div>
+		<input type="button" id="btn" value="开灯">
+		<div class="box1">傻逼请关灯</div>
+		<script>
+			var btn = document.getElementById("btn");
+			btn.onclick = function () {
+				if(btn.value == "开灯"){
+					btn.value = "关灯";
+					document.body.style.background = "#fff"
+				}else {
+					btn.value = "开灯"
+					document.body.style.background = "#000";
+				}
+				
+			}
+			
+			
+		</script>
+	
+
+</body></html>

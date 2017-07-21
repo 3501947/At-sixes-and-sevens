@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>5F90-9E4F</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 500px;
+      height: 500px;
+      border: 1px solid #ccc;
+      padding: 10px;
+
+    }
+
+    .big {
+      margin: 100px auto 0;
+      width: 500px;
+      box-shadow: 0px 0px 2px 2px #ccc;
+      overflow: auto;
+      position: relative;
+    }
+
+    .row {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .p_right {
+      text-align: right;
+    }
+    p.hello{
+      border-bottom:1px dashed #ccc;
+      color: blue;
+    }
+    .input-group{
+      position: absolute;
+      bottom:0;
+    }
+  </style>
+</head>
+<body>
+<div class="big clearfix">
+  <div class="box"></div>
+</div>
+<div class="computer" >
+  <div class="row">
+
+  <div>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="你想聊点什么">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">发送</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+</div>
+<script type="text/template" id="aztpl">
+  {{each $data  v i}}
+  <p class="p_right">{{v.content}}</p>
+  {{/each}}
+
+</script>
+<script src="js/code.js"></script>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/template-web.js"></script>
+<script>
+  $(function () {
+    (function () {
+      var btn = document.querySelector(".btn-default");
+      //注册发送按钮点击事件
+      btn.onclick = function () {
+        var content = document.querySelector(".box");
+        var inp = document.querySelector(".form-control");
+        //创建p元素
+        var p = document.createElement("p");
+        $(p).addClass('hello') ;
+        if(inp.value.trim() == "") {
+          return false ;
+        }
+        var id = inp.value;
+        inp.value = "";
+        p.innerHTML = '我说' + " : " + id;
+        content.appendChild(p);
+        $.ajax({
+          url: "http://api.jisuapi.com/iqa/query",
+          dataType: "jsonp",
+          data: {
+            appkey: 'ae28ccdabca1ca15',
+            question: id
+          },
+          success: function (data) {
+            var html = template("aztpl", data);
+            console.log(data)
+            $(".box").append(html);
+          }
+        })
+      }
+      document.onkeyup = function(e) {
+          if(e.keyCode == 13){
+            btn.onclick() ;
+          }
+      }
+    })();
+
+  })
+
+
+</script>
+</body>
+</html>

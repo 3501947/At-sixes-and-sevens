@@ -1,0 +1,78 @@
+.mmm_header {
+  color: #fff;
+  text-align: center;
+}
+.mmm_header h3 {
+  font-size: 1.15rem;
+  line-height: 2.5rem;
+}
+.mmm_header .left {
+  width: 2.5rem;
+}
+.mmm_header .left span {
+  color: #fff;
+  font-family: "宋体";
+  font-weight: 900;
+  font-size: 1.15rem;
+  line-height: 2.5rem;
+  margin-left: 0.5rem;
+}
+.mmm_list {
+  position: relative;
+}
+.mmm_list .bot {
+  padding: 0 0 0.5rem 0;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+}
+.mmm_list .bot li {
+  padding: 0.5rem 0.5rem 0;
+  border-bottom: 0.025rem solid #ddd;
+  background-color: #fff;
+  height: 6.4rem;
+  position: relative;
+}
+.mmm_list .bot li .left img {
+  width: 5.75rem;
+}
+.mmm_list .bot li .right {
+  margin: 0.875rem 0 0 6.25rem;
+}
+.mmm_list .bot li .right p {
+  font-weight: 700;
+  font-size: 0.7rem;
+  color: #000;
+}
+.mmm_list .bot li .right p span {
+  color: #ff841d;
+}
+.mmm_list .bot li .right .info {
+  margin-top: 0.75rem;
+  font-size: 0.625rem;
+}
+.mmm_list .bot li .right .info .msg {
+  margin-right: 0.5rem;
+  color: #666;
+}
+.con {
+  margin-top: 0.125rem;
+}
+.con .foot {
+  height: 2rem;
+  text-align: center;
+}
+.con .foot input {
+  right: 0.25rem;
+  height: 1.3rem;
+  width: 3.05rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 5px #666;
+  outline: none;
+  font-size: 0.7rem;
+  color: #666;
+}
+.con .foot select {
+  margin: 0 2.25rem;
+  height: 1.125rem;
+  width: 2.5rem;
+}

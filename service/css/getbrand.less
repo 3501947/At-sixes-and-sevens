@@ -1,0 +1,210 @@
+//列表头
+.navbar {
+  height: 76/40rem;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  background-color: #f1f1f1;
+  .nav_dh li {
+    padding-left: 10/40rem;
+    font-size: 28/40rem;
+    line-height: 76/40rem;
+    a {
+      margin-right: 10/40rem;
+      font-size: 28/40rem;
+    }
+  }
+  input {
+    right: 10/40rem;
+    height: 52/40rem;
+    width: 122/40rem;
+    border-radius: 10/40rem;
+    box-shadow: 0 0 5px #666;
+    outline: none;
+    font-size: 28/40rem;
+    color: #666;
+  }
+}
+
+//hot
+.hot {
+  p {
+    height: 80/40rem;
+    line-height: 80/40rem;
+    border-bottom: 1/40rem solid #ccc;
+    background-color: #eee;
+    text-indent: 30/40rem;
+    font-size: 36/40rem;
+    font-weight: 700;
+    color: #943f06;
+  }
+}
+
+//paihang
+.paihang {
+  ul {
+    li {
+      border-bottom: 1/40rem solid #ccc;
+      padding: 20/40rem;
+      position: relative;
+      .img {
+        width: 50/40rem;
+        height: 50/40rem;
+        line-height: 50/40rem;
+        margin-top: 10/40rem;
+        background-color: #ccc;
+        color: #fff;
+        text-align: center;
+        font-size: 28/40rem;
+      }
+      .tit {
+        margin-left: 80/40rem;
+        p:first-child {
+          font-size: 38/40rem;
+          color: #000;
+        }
+        p:last-child {
+          font-size: 30/40rem;
+          color: #999;
+        }
+      }
+    }
+    li:before {
+      display: block;
+      content: "";
+      width: 1rem;
+      height: 50/40rem;
+      right: 20/40rem;
+      background: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#999999' d='M746.255255 299.653099 746.33098 299.728824 713.12674 332.933063 713.049992 332.857339 297.859875 748.048479 264.635169 714.82275 679.816077 299.642866 264.635169-115.538041 297.859875-148.762747 713.00906 266.386438 713.085808 266.30969 746.341213 299.567141Z'  transform='translate(0, 812) scale(1, -1)'/></svg>") no-repeat;
+    }
+    li:first-child .img {
+      background-color: red;
+    }
+    li:nth-child(2) .img {
+      background-color: orange;
+    }
+    li:nth-child(3) .img {
+      background-color: lightgreen;
+    }
+  }
+}
+
+.bot {
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+  li {
+    padding: 20/40rem  20/40rem 0;
+    border-bottom: 1/40rem solid #ddd;
+    background-color: #fff;
+    height: 256/40rem;
+    position: relative;
+    .left img {
+      width: 230/40rem;
+    }
+    .right {
+      margin: 20/40rem 0 0 250/40rem;
+      position: relative;
+      .xing {
+        color: orange;
+        font-size: 55/40rem;
+        position: absolute;
+        bottom: 40/40rem;
+        right: 10/40rem;
+      }
+      p {
+        font-size: 28/40rem;
+        color: #000;
+        font-weight: 700;
+      }
+      .prc {
+        color: red;
+        margin: 10/40rem 0 -15/40rem;
+        font-size: 40/40rem;
+      }
+      .info {
+        margin-top: 30/40rem;
+        font-size: 25/40rem;
+        .msg {
+          margin-left: 40/40rem;
+          color: #666;
+        }
+      }
+    }
+  }
+}
+
+.lili {
+  li {
+    border-bottom: 1/40rem solid #ddd;
+    padding: 20/40rem  20/40rem 0;
+    a {
+      display: block;
+      background-color: #F7F7F7;
+      height: 256/40rem;
+      position: relative;
+      margin-bottom: 10/40rem;
+      .left img {
+        width: 230/40rem;
+      }
+      .right {
+        margin: 20/40rem 0 0 250/40rem;
+        position: relative;
+        p {
+          font-size: 30/40rem;
+          color: #000;
+          font-weight: 700;
+        }
+      }
+    }
+    .log {
+      width: 660/40rem;
+      border: 1/40rem solid #e8e8e8;
+      margin-bottom: 20/40rem;
+      background-color: #fefefe;
+      padding: 20/40rem;
+      font-size: 30/40rem;
+      position: relative;
+      .inf{
+        height: 50/40rem;
+        line-height: 50/40rem;
+        text-align: center;
+        margin-bottom: 20/40rem;
+        span{
+          display: inline-block;
+          height: 50/40rem;
+          line-height: 50/40rem;
+          vertical-align: middle;
+        }
+        .user{
+          color: darkgreen;
+          font-size: 30/40rem;
+        }
+        .xing {
+          color: orange;
+          font-size: 55/40rem;
+          margin-top: -0.15rem;
+        }
+        .time{
+          color: #666;
+          font-size: 30/40rem;
+        }
+      }
+      p{
+        font-size: 34/40rem;
+        color: #000;
+      }
+      i{
+        display: inline-block;
+        position: absolute;
+        width: .6rem;
+        height: .6rem;
+        background-color: #ccc;
+        left: 2.5rem;
+        top: -.3rem;
+        transform: rotate(45deg);
+        border-top: 1/40rem solid #ddd;
+        border-left: 1/40rem solid #ddd;
+        background-color: #fefefe;
+      }
+    }
+  }
+}

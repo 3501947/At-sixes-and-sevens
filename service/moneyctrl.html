@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>省钱控</title>
+    <link rel="stylesheet" href="css/moneyctrl.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<!--头部区域-->
+<header class="mmm_header">
+    <div class="right fr"><a href="javascript:void(0);"><img src="images/header_app.png" alt=""></a></div>
+    <div class="left fl"><span onclick="window.location.href='index.html'"><</span></div>
+    <h3>省钱控-最新优惠</h3>
+</header>
+<!--产品列表-->
+<section class="mmm_list">
+    <ul class="bot list_bot">
+
+    </ul>
+</section>
+
+<!--内容-->
+<section class="con">
+    <div class="foot">
+        <input type="button" value="上一页" class="pre">
+        <select class="select">
+
+        </select>
+        <input type="button" value="下一页" class="bf">
+    </div>
+</section>
+<!--底部-->
+<footer class="mmm_footer">
+    <ul class="nav clearfix">
+        <li class="fl"><a href="javascript:void(0);">登录</a></li>
+        <li class="fl"><a href="javascript:void(0);">注册</a></li>
+        <li class="fl"><a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</a></li>
+    </ul>
+    <p>
+        <a href="javascript:void(0);">手机APP下载</a>
+        <a href="javascript:void(0);">慢慢买手机版</a>
+        <span>--掌上会比价平台</span>
+    </p>
+    <p>m.manmanbuy.com</p>
+</footer>
+
+
+</body>
+
+<script type="text/template" id="listtpl">
+    {{each result v i}}
+    <li class="zhekou" data-zk="{{v.productId}}">
+        <a href="javascript:void(0);">
+            <div class="right fr">
+                <p>{{v.productName}}<span>{{v.productPinkage}}</span></p>
+                <div class="info">
+                    <span class="add">{{v.productFrom}}</span>
+                    <span class="date">{{v.productTime}}</span>
+                    <span class="msg fr">{{v.productComCount}}</span>
+                </div>
+            </div>
+            <div class="left center-self_y">
+                {{@v.productImgSm}}
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script type="text/template" id="pagetpl">
+    {{each $data v i}}
+    <option value="{{v}}">{{v}}</option>
+    {{/each}}
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/template-web.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/moneyctrl.js"></script>
+</html>

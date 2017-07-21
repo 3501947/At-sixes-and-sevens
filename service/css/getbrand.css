@@ -1,0 +1,195 @@
+.navbar {
+  height: 1.9rem;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  background-color: #f1f1f1;
+}
+.navbar .nav_dh li {
+  padding-left: 0.25rem;
+  font-size: 0.7rem;
+  line-height: 1.9rem;
+}
+.navbar .nav_dh li a {
+  margin-right: 0.25rem;
+  font-size: 0.7rem;
+}
+.navbar input {
+  right: 0.25rem;
+  height: 1.3rem;
+  width: 3.05rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 5px #666;
+  outline: none;
+  font-size: 0.7rem;
+  color: #666;
+}
+.hot p {
+  height: 2rem;
+  line-height: 2rem;
+  border-bottom: 0.025rem solid #ccc;
+  background-color: #eee;
+  text-indent: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #943f06;
+}
+.paihang ul li {
+  border-bottom: 0.025rem solid #ccc;
+  padding: 0.5rem;
+  position: relative;
+}
+.paihang ul li .img {
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  margin-top: 0.25rem;
+  background-color: #ccc;
+  color: #fff;
+  text-align: center;
+  font-size: 0.7rem;
+}
+.paihang ul li .tit {
+  margin-left: 2rem;
+}
+.paihang ul li .tit p:first-child {
+  font-size: 0.95rem;
+  color: #000;
+}
+.paihang ul li .tit p:last-child {
+  font-size: 0.75rem;
+  color: #999;
+}
+.paihang ul li:before {
+  display: block;
+  content: "";
+  width: 1rem;
+  height: 1.25rem;
+  right: 0.5rem;
+  background: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#999999' d='M746.255255 299.653099 746.33098 299.728824 713.12674 332.933063 713.049992 332.857339 297.859875 748.048479 264.635169 714.82275 679.816077 299.642866 264.635169-115.538041 297.859875-148.762747 713.00906 266.386438 713.085808 266.30969 746.341213 299.567141Z'  transform='translate(0, 812) scale(1, -1)'/></svg>") no-repeat;
+}
+.paihang ul li:first-child .img {
+  background-color: red;
+}
+.paihang ul li:nth-child(2) .img {
+  background-color: orange;
+}
+.paihang ul li:nth-child(3) .img {
+  background-color: lightgreen;
+}
+.bot {
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+}
+.bot li {
+  padding: 0.5rem 0.5rem 0;
+  border-bottom: 0.025rem solid #ddd;
+  background-color: #fff;
+  height: 6.4rem;
+  position: relative;
+}
+.bot li .left img {
+  width: 5.75rem;
+}
+.bot li .right {
+  margin: 0.5rem 0 0 6.25rem;
+  position: relative;
+}
+.bot li .right .xing {
+  color: orange;
+  font-size: 1.375rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 0.25rem;
+}
+.bot li .right p {
+  font-size: 0.7rem;
+  color: #000;
+  font-weight: 700;
+}
+.bot li .right .prc {
+  color: red;
+  margin: 0.25rem 0 -0.375rem;
+  font-size: 1rem;
+}
+.bot li .right .info {
+  margin-top: 0.75rem;
+  font-size: 0.625rem;
+}
+.bot li .right .info .msg {
+  margin-left: 1rem;
+  color: #666;
+}
+.lili li {
+  border-bottom: 0.025rem solid #ddd;
+  padding: 0.5rem 0.5rem 0;
+}
+.lili li a {
+  display: block;
+  background-color: #F7F7F7;
+  height: 6.4rem;
+  position: relative;
+  margin-bottom: 0.25rem;
+}
+.lili li a .left img {
+  width: 5.75rem;
+}
+.lili li a .right {
+  margin: 0.5rem 0 0 6.25rem;
+  position: relative;
+}
+.lili li a .right p {
+  font-size: 0.75rem;
+  color: #000;
+  font-weight: 700;
+}
+.lili li .log {
+  width: 16.5rem;
+  border: 0.025rem solid #e8e8e8;
+  margin-bottom: 0.5rem;
+  background-color: #fefefe;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  position: relative;
+}
+.lili li .log .inf {
+  height: 1.25rem;
+  line-height: 1.25rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.lili li .log .inf span {
+  display: inline-block;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  vertical-align: middle;
+}
+.lili li .log .inf .user {
+  color: darkgreen;
+  font-size: 0.75rem;
+}
+.lili li .log .inf .xing {
+  color: orange;
+  font-size: 1.375rem;
+  margin-top: -0.15rem;
+}
+.lili li .log .inf .time {
+  color: #666;
+  font-size: 0.75rem;
+}
+.lili li .log p {
+  font-size: 0.85rem;
+  color: #000;
+}
+.lili li .log i {
+  display: inline-block;
+  position: absolute;
+  width: .6rem;
+  height: .6rem;
+  background-color: #ccc;
+  left: 2.5rem;
+  top: -0.3rem;
+  transform: rotate(45deg);
+  border-top: 0.025rem solid #ddd;
+  border-left: 0.025rem solid #ddd;
+  background-color: #fefefe;
+}

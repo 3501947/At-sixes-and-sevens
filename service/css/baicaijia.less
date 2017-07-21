@@ -1,0 +1,192 @@
+@color: #e4393c;
+
+.mmm_header {
+  color: #fff;
+  text-align: center;
+  background-color: @color !important;
+  h3 {
+    font-size: 46/40rem;
+    line-height: 2.5rem;;
+  }
+  .left {
+    width: 2.5rem;
+    span {
+      color: #fff;
+      font-family: "宋体";
+      font-weight: 900;
+      font-size: 46/40rem;
+      line-height: 2.5rem;;
+      margin-left: 20/40rem;
+    }
+  }
+}
+
+nav {
+  height: 80/40rem;
+  border-bottom: 1/40rem solid #ddd;
+  position: relative;
+  margin-bottom: 10/40rem;
+  .img {
+    width: 80/40rem;
+    background-color: #eee;
+    padding: 10/40rem;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+  }
+  #wrapper {
+    height: 80/40rem;
+    border-right: 1/40rem solid #ddd;
+    margin-right: 80/40rem;
+    overflow: hidden;
+    ul {
+      background-color: #fff;
+      width: 1078/40rem;
+      height: 80/40rem;
+      white-space: nowrap;
+      li {
+        height: 80/40rem;
+        margin: 0 20/40rem;
+        text-align: center;
+        line-height: 80/40rem;
+        a {
+          display: block;
+          height: 72/40rem;
+          color: #000;
+          font-weight: 700;
+          font-size: 32/40rem;
+        }
+      }
+    }
+  }
+}
+
+.conlist{
+  .bot {
+    padding:0 0 20/40rem 0;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    li {
+      padding:20/40rem  20/40rem 0 ;
+      border-bottom: 1/40rem solid #ddd;
+      background-color: #fff;
+      height: 256/40rem;
+      position: relative;
+      box-sizing: border-box;
+      margin-bottom: 15/40rem;
+      .left img {
+        width: 230/40rem;
+      }
+      .right {
+        height: 100%;
+        margin-left:250/40rem;
+        h3 {
+          font-size: 30/40rem;
+          color: #000;
+          span{
+            color: orange;
+          }
+        }
+        .after{
+          color: red;
+          font-size: 44/40rem;
+          i{
+            font-size: 34/40rem;
+          }
+          em{
+            margin-left: 20/40rem;
+
+          }
+          del{
+            margin-left: 20/40rem;
+            color: #999;
+            font-size: 28/40rem;
+          }
+        }
+        .bar{
+          margin: -5/40rem 0 15/40rem 0;
+          i{
+            display: inline-block;
+            height: 30/40rem;
+            line-height: 30/40rem;
+            width: 160/40rem;
+            border: 1/40rem solid red;
+            background-color: pink;
+            vertical-align: middle;
+            border-radius: 30/40/2rem;
+            color: #ffffff;
+            overflow: hidden;
+            position: relative;
+            em{
+              background-color: red;
+              display: block;
+              height: 30/40rem;
+              border-radius: 30/40/2rem;
+            }
+            span{
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translateX(-50%) translateY(-50%);
+              font-size: 28/40rem;
+              z-index: 1;
+            }
+          }
+          b{
+            color: red;
+            margin-left: 20/40rem;
+            font-size: 28/40rem;
+          }
+        }
+        .link{
+          a{
+            color: #fff !important;
+          }
+          a:first-child{
+            display: inline-block;
+            width: 210/40rem;
+            height: 50/40rem;
+            font-size: 22/40rem;
+            border: 1/40rem dashed red;
+            color: red !important;
+            line-height: 50/40rem;
+            text-align: center;
+            font-weight: 700;
+          }
+          a:last-child{
+            float: right;
+            display: inline-block;
+            width: 150/40rem;
+            height: 50/40rem;
+            font-size: 28/40rem;
+            border-radius: 10/40rem;
+            color: #fff;
+            background-color: #ff5e5d;
+            line-height: 50/40rem;
+            text-align: center;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bd{
+  border-bottom: 6/40rem solid @color;
+  color: @color;
+}
+
+.fix{
+  display: none;
+  width: 80/40rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.4);
+  box-sizing: border-box;
+  padding: 0.3rem;
+  position: fixed;
+  right: 0.8rem;
+  bottom: 1.8rem;
+  z-index: 1;
+}

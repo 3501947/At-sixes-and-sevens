@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box{
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            border:2px solid slateblue;
+            position: absolute;
+            left:50%;
+            top:50%;
+            margin-left:-250px;
+            margin-top:-250px;
+        }
+        .point{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left:50%;
+            top:50%;
+            margin:-15px 0 0 -15px;
+            background-color: slateblue;
+            border-radius: 50%;
+        }
+        ul{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        li{
+            position: absolute;
+            left:50%;
+            top:0;
+            margin-left:-1px;
+            width: 2px;
+            height: 10px;
+            background-color: slateblue;
+            transform-origin: 0 250px;
+        }
+        .s,.f,.m{
+            position: absolute;
+            left:247px;
+            top:50px;
+            width: 6px;
+            height: 200px;
+            background-color: skyblue;
+            border-radius: 6px 6px 6px 6px/6px 6px 6px 6px;
+            animation:move 43200s infinite linear;
+            transform-origin:0 200px;
+
+        }
+        .f,.m{
+            width: 4px;
+            left:248px;
+            height: 230px;
+            top:20px;
+            background-color: lightgreen;
+            animation:move 3600s infinite linear;
+            transform-origin:0 230px;
+        }
+        .m{
+            background-color: red;
+            width: 2px;
+            left:249px;
+            animation:move 60s infinite linear;
+            transform-origin:0 230px;
+        }
+        @keyframes move {
+
+            /*注：不用JS设置定时器的方式旋转【此种方式在js课程中已经实现】，而是纯用c3的动画进行旋转，是否有办法实现？问题点：获取不到@keyframes 里面的属性*/
+
+            to{
+                transform:rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <span class="s"></span>
+    <span class="f"></span>
+    <span class="m"></span>
+    <span class="point"></span>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<script>
+    var lis=document.querySelectorAll("li");
+    var s=document.querySelector(".s");
+    var m=document.querySelector(".m");
+    var f=document.querySelector(".f");
+    for (var i = 0; i < lis.length; i++) {
+      lis[i].style.transform="rotate("+i*30+"deg)";
+    }
+    var timer=null;
+    var now=new Date();
+    var hour=now.getHours();
+    var min=now.getMinutes();
+    var second=now.getSeconds();
+    var milsecond=now.getMilliseconds();
+
+    var srotate = (hour+min/60)*30;
+    var frotate = (min+second/60)*6;
+    var mrotate = (second+milsecond/1000)*6;
+
+    s.style.transform="rotate("+(hour+min/60)*30+"deg)";
+    f.style.transform="rotate("+(min+second/60)*6+"deg)";
+    m.style.transform="rotate("+(second+milsecond/1000)*6+"deg)";
+
+    var keyframes = '@keyframes move {\
+                    to {\
+                        transform:rotate(' + (mrotate + 360) + 'deg);\
+                    }\
+                }';
+
+    var style = document.querySelector('style');
+
+    style.innerHTML += keyframes;
+
+//    timer=setInterval(function(){
+//        now=new Date();
+//    },20);
+
+
+</script>
+</body>
+</html>
